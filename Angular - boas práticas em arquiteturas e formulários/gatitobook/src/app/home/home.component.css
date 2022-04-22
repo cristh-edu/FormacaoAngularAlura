@@ -1,5 +1,17 @@
 .home{
-  margin:0 5%;
-  width: 90%;
+  margin:0;
+  padding:0 5%;
+  width: 100%;
   height: 100vh;
+  background: #37474f;  /* fallback for old browsers
+  background: -webkit-linear-gradient(to bottom, #455a64, #203A43, #0F2027);  Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #455a64, #37474f, #263238); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.borda{
+  border-radius: 5px;
+  background-color: #fafafa;
+  overflow: auto;
+  max-height: 90vh;
 }
