@@ -1,0 +1,32 @@
+<app-cabecalho></app-cabecalho>
+<hr class="mb-5" />
+<div
+  class="container mt-5 p-3 bg-white border"
+  *ngIf="animal$ | async as animal"
+>
+  <div class="row">
+    <div class="col-lg-8">
+      <app-animal
+        [url]="animal.url"
+        [descricao]="animal.description"
+      ></app-animal>
+    </div>
+    <div class="col-lg-4">
+      <small class="d-flex justify-content-end">
+        <p class="text-end text-break">{{ animal.description }}</p>
+        <i (click)="curtir()" class="fa fa-heart-o me-2">{{ animal.likes }}</i>
+        <i class="fa fa-comments-o me-2">{{ animal.comments }}</i>
+        <i (click)="excluir()" class="fa fa-trash-o me-2"></i>
+      </small>
+
+      <app-comentarios
+        [id]="animal.id"
+        *ngIf="animal.allowComments; else warning"
+      ></app-comentarios>
+      <ng-template #warning>
+        <p>Usuário não pode comentar o animal</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<app-rodape></app-rodape>

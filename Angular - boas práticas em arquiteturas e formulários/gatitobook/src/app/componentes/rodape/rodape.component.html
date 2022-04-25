@@ -1,11 +1,35 @@
-<footer>
-  <div class="fixed-bottom bg-dark p-1">
-    <div class="row text-center">
-      <div class="col-6">
-        <a [routerLink]="['']">
-          <i class="fa fa-home fa-2x"></i>
-        </a>
-      </div>
+<div class="container">
+  <footer
+    class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+  >
+    <div class="col-md-4 d-flex align-items-center">
+      <a
+        href="/"
+        class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+      >
+        <svg class="bi" width="30" height="24">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <span class="text-muted">© 2022 Cristhian Eduardo</span>
     </div>
-  </div>
-</footer>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-2">
+        <a class="text-muted" href="https://www.instagram.com/cristhedu29/"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </li>
+      <li class="ms-2">
+        <a class="text-muted" href="https://www.linkedin.com/in/cristhedu/"
+          ><i class="fa fa-linkedin-square"></i
+        ></a>
+      </li>
+      <li class="ms-2">
+        <a class="text-muted" href="https://github.com/cristh-edu"
+          ><i class="fa fa-github"></i
+        ></a>
+      </li>
+    </ul>
+  </footer>
+</div>
