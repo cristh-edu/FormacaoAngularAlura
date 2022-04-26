@@ -1,0 +1,19 @@
+<div class="button-group">
+  <label class="label">{{ label }}</label>
+  <button
+    [ngClass]="value === options.YES ? 'button-pressed' : ''"
+    class="button button-yes"
+    (click)="activate(options.YES)"
+    type="button"
+  >
+    Yes
+  </button>
+  <button
+    [ngClass]="value === options.NO ? 'button-pressed' : ''"
+    class="button button-no"
+    (click)="activate(options.NO)"
+    type="button"
+  >
+    No
+  </button>
+</div>
